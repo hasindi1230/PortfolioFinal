@@ -1,0 +1,550 @@
+body{
+    background-color: rgb(4, 11, 49);
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background: linear-gradient(to right, rgb(20, 79, 131), rgb(187, 190, 233));
+    width: 100%;  
+    height: 80px;
+    top: 0px; 
+    display: flex;
+    justify-content: end;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    z-index: 1000;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    margin: 0;
+}
+nav ul li{
+    display: inline;
+    padding: 20px;
+   
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    font-size: larger;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: rgba(9, 11, 11, 0.863);
+}
+nav ul li:hover{
+    background-color: transparent;
+}
+
+
+/* Home CSS */
+html{
+    scroll-behavior: smooth;
+}
+#home .container{
+    margin-top: 50px;
+    margin-left: 100px;
+    color: aliceblue;
+    font-size: 30px;   
+    display: flex;
+    justify-content: space-between;
+
+}
+section{
+    height: 120vh;
+}
+.change::after{
+    content: " Computer Science Undergraduate";
+    color: rgb(70, 173, 211);
+    font-size: 30px;
+}
+.change1::after{
+    content: " Hasindi! ";
+    color: rgb(70, 173, 211);
+    font-size: 30px;
+}
+#home .para{
+    font-size: 22px;
+}
+#home h1, img{
+    animation: scaleOutEase 2s ease-out forwards;
+}
+
+@keyframes scaleOutEase{
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+
+#home .image{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-right: 230px;
+    overflow: hidden;
+    margin-top: 80px;   
+    box-shadow: 0 0 50px rgb(134,245,255),
+                0 0 30px rgb(140, 140, 199),
+                0 0 20px #00f; 
+    transition: opacity 0.3s ease;
+}
+#home .img :hover{
+    opacity: 0.7;
+}
+#home img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+}
+#home .button{
+    margin-left: 250px;
+    
+}
+.talk{
+   background-color: rgba(38, 122, 139, 0.6);
+   box-shadow: 0 0 10px rgb(143, 205, 239);
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+
+}
+.talk:hover{
+    background-color: rgba(29, 175, 201, 1);
+}
+.talk:focus{
+    outline: 2px solid rgba(29, 175, 201, 0.8);
+}
+.talk a{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-decoration: none; 
+}
+
+/* About CSS */
+.about{
+    color: #ffffff;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgb(141, 226, 247),
+                 0 0 8px rgb(86, 143, 229);
+    
+    padding-top: 80px;
+    animation: scaleOutEase 2s ease-out forwards;
+    
+}
+
+.para1{
+    margin-left: 700px;
+
+}
+.para1 h2{
+    margin-top: -20px;
+    color: rgb(70, 173, 211);
+}
+.para1 p{
+    color: #ffffff;
+    font-size: 20px;
+}
+#about .image{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+   
+    box-shadow: 0 0 50px rgb(134,245,255),
+                0 0 30px rgb(140, 140, 199),
+                0 0 20px #00f; 
+    transition: opacity 0.3s ease;
+    display: block;
+
+}
+#about .img :hover{
+    opacity: 0.7;
+}
+#about img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+    margin-top: -380px;
+    margin-left: 120px;
+    animation: slideIn 1s ease-in;
+}
+
+@keyframes slideIn{
+    from{
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+    to{
+        transform:translatex(0);
+        opacity: 1;
+    }
+}
+
+.gender h3{
+    color: #50cfe5;
+    margin-left: 800px;
+    text-shadow: 0 0 10px rgb(56, 56, 238),
+                 0 0 8px rgb(147, 184, 210)
+}
+
+/* Media Queries for mobile phone view */
+
+@media (max-width: 800px) {
+    nav{
+        height: auto;
+    }
+    nav ul{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    nav ul li{
+        padding: 5px;
+    }
+
+    #home .image,#about.image{
+        height: 200px;
+        width: 200px;
+    }
+    #home.container{
+        flex-direction: column;
+        font-size: 6px;
+        text-align: center;
+    }
+  
+    #about .para1{
+       text-align: center;
+       font-size: 6px;
+    }
+    #about .image{
+        margin-top: -2000px;
+    }
+}
+
+
+/* Skills CSS */
+.skills{
+    color: #ffffff;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgb(141, 226, 247),
+                0 0 8px rgb(86, 143, 229);
+    padding-top: 20px;
+}
+
+.skills h1{  
+    animation: scaleOutEase 2s ease-out forwards;
+}
+.technical{
+    margin-left: 250px;
+    color: rgb(70, 173, 211);
+    text-decoration: underline;
+    margin-top: 100px;
+}
+.htmlimg{
+    height: 25px;
+    margin-left: 200px;
+}
+.skill{
+    color: #ffffff;
+    animation: scaleOutEase 2s ease-out forwards;
+}
+.progressbar{
+    width: 300px;
+    background-color: rgb(135, 135, 126);
+    border-radius: 15px;
+    height: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 200px;
+}
+.progress{
+    height: 100%;
+    background-color: rgb(0, 238, 255);
+    border-radius: 15px;
+}
+
+.professional{
+    color: rgb(70, 173, 211);
+    text-decoration: underline;
+    margin-top: -470px;
+    margin-left: 1050px;
+}
+.communicationimg{
+    height: 25px;
+    margin-left: 1000px ;
+}
+.progressbar2{
+    width: 300px;
+    background-color: rgb(135, 135, 126);
+    border-radius: 15px;
+    height: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 1000px;
+}
+
+/* projects CSS */
+#projects h1{
+    animation: scaleOutEase 2s ease-out forwards;
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgb(141, 226, 247),
+                 0 0 8px rgb(86, 143, 229);
+    padding-top: 40px ;
+}
+
+#projects .images{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#projects .container, .container1{
+    align-items: center;
+    border: 2px solid rgb(134, 202, 219);
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+    width: 1500px;
+    height: 280px;
+    margin: 20px;
+    margin-top: -30px;
+}
+
+.airline{
+    border-radius: 5%;
+    width: 500px;
+    height: 280px;
+    margin-top: 0%;
+    box-shadow: 0 0 10px rgb(134,245,255),
+                0 0 5px #00f; 
+   margin-left: 10px;
+}
+#projects .description{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+#projects .skill{
+    margin-left: 110px;
+}
+#projects .main{
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: -20px;
+}
+
+#projects div , .main {
+    color: #ffffff;
+    margin-top: 1%;
+}
+#projects .description , .date{
+    margin-top: 3%;
+}
+.more a{
+    color: #50cfe5;
+    margin-left: 190px;
+}
+.more1 a{
+    color: #50cfe5;
+    margin-left: 260px;
+}
+
+.nature{
+    border-radius: 5%;
+    width: 500px;
+    height: 280px;
+    margin-top: 0%;
+    box-shadow: 0 0 10px rgb(134,245,255),
+                0 0 5px #00f; 
+    margin-left: 10px;
+}
+
+#projects .main1{
+    margin-left: 200px;
+    font-weight: bold;
+    font-size: large;
+}
+#projects .description1{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+#projects .skill1{
+    margin-left: 196px;
+}
+#projects .date1{
+    margin-left: 55px;
+}
+
+/* Contact CSS*/
+.contact{
+    color: #ffffff;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgb(141, 226, 247),
+                 0 0 8px rgb(86, 143, 229);
+    animation: scaleOutEase 2s ease-out forwards;
+    padding-top: 30px;
+    
+}
+@keyframes scaleOutEase{
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+#contact .para h2{
+    color: #ffffff;
+    font-family: Bauhaus 93;
+    font-size: 30px;
+    margin-left: 80px;
+    
+}
+#contact .para p{
+    color: #bbe7f2;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+form{
+    margin-left: 1000px;
+    margin-top: -240px;
+    padding: 10px;
+    position: absolute;
+    
+}
+
+#form h1{
+    color: #ffffff;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+
+textarea{
+    width: 400px;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius:15px ;
+    box-sizing: border-box;
+    background-color: rgb(180, 177, 173);
+
+}
+
+#form input::placeholder,
+#form textarea::placeholder {
+    font-size: 15px;
+    color: rgb(17, 89, 103);
+   
+}
+
+textarea{
+    height: 80px;
+}
+#submit{
+    background-color: rgba(38, 122, 139, 0.6);
+    box-shadow: 0 0 10px rgb(143, 205, 239);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-decoration: none; 
+    margin-top: 10px ;
+    margin-left:150px;
+}
+#submit:hover{
+    background-color: rgba(29, 175, 201, 1);
+}
+img{
+    height: 45px;
+    margin-left: 100px;
+    margin-top: 20px;
+    border: 3px solid rgb(125, 249, 249);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgb(143, 205, 239);
+    border-radius: 26px;
+}
+.facebook{
+    margin-left: 15px;
+    pointer-events: auto;
+    z-index: 1;
+}
+.linkedin , .gmail{
+    margin-left: 15px;
+}
+img:hover{
+    opacity: 0.6;
+}
+span{
+    font-size: large;
+}
+
+
+
+footer{
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Airline See More CSS */
+#airlineMore img{
+    width: 600px;
+    height: auto;
+    border-radius: 0;
+}
+#airlineMore h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* Nature See More CSS */
+#natureMore h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+#natureMore img{
+    width: 600px;
+    height: auto;
+    border-radius: 0;
+}
+
+.top{
+    width: 250px;
+    margin-left: 1300px;
+}
